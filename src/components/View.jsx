@@ -1,6 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const View = () => {
+    const [cont, changeData] = useState(
+        [
+            {
+                "fname": "Richi",
+                "lname": "Roy",
+                "mob": "88888777722",
+                "email": "r@gmail",
+                "address": "ABC"
+            }
+        ]
+    )
     return (
         <div>
             <div class="card text-center mb-3">
@@ -19,20 +30,19 @@ const View = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Otto</td>
-                                <td>Mark</td>
-                                <td>8978700078</td>
-                                <td>@mdo</td>
-                                <td>VCB</td>
-                            </tr>
-                            <tr>
-                                <td>Thornton</td>
-                                <td>Jacob</td>
-                                <td>6756447747</td>
-                                <td>@fat</td>
-                                <td>BNM</td>
-                            </tr>
+                            {
+                                cont.map(
+                                    (value,index)=>{
+                                        return <tr>
+                                        <td>{value.fname}</td>
+                                        <td>{value.lname}</td>
+                                        <td>{value.mob}</td>
+                                        <td>{value.email}</td>
+                                        <td>{value.address}</td>
+                                    </tr>
+                                    }
+                                )
+                            }
                         </tbody>
                     </table>
                 </div>
