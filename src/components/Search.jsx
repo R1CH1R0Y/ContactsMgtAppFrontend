@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Search = () => {
-
+    const [cont, changeData] = useState(
+        {
+            "fname": "",
+        }
+    )
+    const inputHandler=(event)=>{
+        changeData({...cont,[event.target.name]:event.target.value})
+    }
+    const readValue=()=>{
+        console.log(cont)
+    }
   return (
     <div>
         <div class="card text-center mb-3">
@@ -12,13 +22,13 @@ const Search = () => {
     <div className="container">
         <div className="row">
             <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                <label htmlFor="" className="form-label">First Name/Last Name/Mobile :</label>
-                <input type="text" className="form-control" />
+                <label htmlFor="" className="form-label">First Name :</label>
+                <input type="text" className="form-control" name='fname' value={cont.fname} onChange={inputHandler}/>
             </div>
         </div>
     </div>
     <br />
-    <button className="btn btn-warning">Search</button>
+    <button className="btn btn-warning" onClick={readValue}>Search</button>
     <br />
     <br />
     <table class="table">
