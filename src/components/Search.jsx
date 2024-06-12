@@ -42,20 +42,7 @@ const Search = () => {
                             </tr>
                         </thead>
                         <tbody>
-                        <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">First Name</th>
-                                <th scope="col">Last Name</th>
-                                <th scope="col">Mobile .</th>
-                                <th scope="col">E-mail</th>
-                                <th scope="col">Address</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                        </tbody>
-                    </table>
+                       
                         </tbody>
                     </table>
   </div>
