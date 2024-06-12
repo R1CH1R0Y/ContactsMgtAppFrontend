@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import Navbar from './Navbar'
 
 const Add = () => {
     const [cont, changeData] = useState(
@@ -34,6 +35,7 @@ const Add = () => {
     }
     return (
         <div>
+            <Navbar/>
             <div class="card text-center mb-3">
                 <div class="card-body">
                     <h5 class="card-title">Add Contacts</h5>
