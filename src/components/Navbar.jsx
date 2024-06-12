@@ -11,9 +11,9 @@ const Navbar = () => {
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#"> Add Contacts </a>
-        <a class="nav-link" href="#"> Search-Delete Contacts </a>
-        <a class="nav-link" href="#"> Contact List</a>
+        <a class="nav-link active" aria-current="page" href="/"> Add Contacts </a>
+        <a class="nav-link" href="/sd"> Search-Delete Contacts </a>
+        <a class="nav-link" href="/v"> Contact List</a>
       </div>
     </div>
   </div>
