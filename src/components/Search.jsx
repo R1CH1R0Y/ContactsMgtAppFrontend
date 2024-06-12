@@ -19,6 +19,20 @@ const Search = () => {
     });
   };
 
+  const deleteContact=(id)=>{
+    let input={"_id":id}
+    axios.post("http://localhost:8335/remove",input).then(
+        (response)=>{
+            console.log(response.data)
+            if(response.data.status==="success"){
+                alert("successfully deleted")
+            }else{
+                alert("error in deletion")
+            }
+        }
+    ).catch()
+}
+
   return (
     <div>
       <div class="card text-center mb-3">
@@ -56,6 +70,7 @@ const Search = () => {
                   <td>{value.mob}</td>
                   <td>{value.email}</td>
                   <td>{value.address}</td>
+                  <td><button className="btn btn-danger" onClick={()=>{deleteContact(value._id)}}>Delete</button></td>
                 </tr>
               ))}
             </tbody>
