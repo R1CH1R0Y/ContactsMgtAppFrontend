@@ -1,17 +1,20 @@
-import React, { useState } from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 
 const View = () => {
-    const [cont, changeData] = useState(
-        [
-            {
-                "fname": "Richi",
-                "lname": "Roy",
-                "mob": "88888777722",
-                "email": "r@gmail",
-                "address": "ABC"
+    const [cont, changeData] = useState([])
+    const fetchData=()=>{
+        axios.post("http://localhost:8335/view").then(
+            (response)=>{
+                changeData(response.data)
             }
-        ]
-    )
+        ).catch(
+            (error)=>{
+                alert(error.message)
+            }
+        )
+    }
+    useEffect(()=>{fetchData()},[])
     return (
         <div>
             <div class="card text-center mb-3">
