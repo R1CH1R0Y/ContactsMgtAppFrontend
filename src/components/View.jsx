@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import Navbar from './Navbar'
 
 const View = () => {
     const [cont, changeData] = useState([])
@@ -17,6 +18,7 @@ const View = () => {
     useEffect(()=>{fetchData()},[])
     return (
         <div>
+            <Navbar/>
             <div class="card text-center mb-3">
                 <div class="card-body">
                     <h5 class="card-title">Contact List</h5>
