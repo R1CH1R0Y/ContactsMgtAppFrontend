@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import Navbar from './Navbar';
 
 const Search = () => {
   const [cont, changeData] = useState({
@@ -35,6 +36,7 @@ const Search = () => {
 
   return (
     <div>
+        <Navbar/>
       <div class="card text-center mb-3">
         <div class="card-body">
           <h5 class="card-title">Search-Delete Contacts</h5>
